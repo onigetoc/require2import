@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node require2import.js",
-    "modify": "node require2import.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "require2import": "node require2import.js",
+    "rtoitest": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

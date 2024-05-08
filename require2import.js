@@ -194,6 +194,4 @@ function trim_edges(str) {
 }
 
 // Appel de la fonction main()
-// main();
-// Exportation du module
-export default require2import;
+require2import();
