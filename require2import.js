@@ -1,8 +1,9 @@
 /** regex in transformRequireToImport from https://github.com/knowbee/rona/blob/master/lib/rona.js with the help of Perplexity.ai for all the code and adaptation */
+// with VS Code : https://umaar.com/dev-tips/222-vs-code-convert-es-import/
 import fs from 'fs';
 import path from 'path';
 
-async function main() {
+async function require2import() {
   const args = process.argv.slice(2);
   if (args.length === 0) {
     await modifyDirectory('.');
@@ -69,11 +70,11 @@ async function transformRequireToImport(code) {
           return `import "${module}";`;
         } else if (what_to_import_obj.type === "scalar") {
           if (!module_property_access && !call_of_module_or_property) {
-            return `import ${what_to_import_obj.import_module_as} from "${module}";`;
+            return `import * as ${what_to_import_obj.import_module_as} from "${module}";`;
           } else if (module_property_access && !call_of_module_or_property) {
             return `import { ${module_property_access} as ${what_to_import_obj.import_module_as} } from "${module}";`;
           } else if (!module_property_access && call_of_module_or_property) {
-            return `import ${what_to_import_obj.import_module_as} from "${module}";`;
+            return `import * as ${what_to_import_obj.import_module_as} from "${module}";`;
           } else if (module_property_access && call_of_module_or_property) {
             return `import { ${what_to_import_obj.import_module_as} } from "${module}";`;
           }
@@ -99,6 +100,7 @@ async function transformRequireToImport(code) {
 
   return converted_text;
 }
+
 
 /**
  * @param {string} what_to_import
@@ -192,4 +194,6 @@ function trim_edges(str) {
 }
 
 // Appel de la fonction main()
-main();
+// main();
+// Exportation du module
+export default require2import;
