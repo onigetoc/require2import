@@ -1,0 +1,40 @@
+{
+  "name": "gc-starter",
+  "version": "1.0.0",
+  "description": "Node Typescript run tester starter",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node require2import.js",
+    "modify": "node require2import.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "test"
+  },
+  "keywords": [
+    "typescript",
+    "starter",
+    "node"
+  ],
+  "author": "onigetoc",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "install": "^0.13.0",
+    "npm": "^10.7.0",
+    "office-text-extractor": "^3.0.3",
+    "path": "^0.12.7",
+    "pdf-parse": "^1.1.1",
+    "pdf-text-reader": "^4.0.1",
+    "pdf2json": "^3.1.2",
+    "simple-test-package": "^0.2.2",
+    "unpdf": "^0.10.1"
+  },
+  "devDependencies": {
+    "require2import.js": "file:.",
+    "@types/node": "^20.12.10",
+    "jest": "^29.7.0"
+  }
+}
