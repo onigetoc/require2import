@@ -36,7 +36,6 @@ The script can be used to transform individual files or entire directories, maki
 
 To use `require2import`, install it as a global npm package:
 
-    npm install -g require2import // global
     npm install require2import // locally in a project
 
 ### Usage
