@@ -1,10 +1,11 @@
-![require2import screenshot]([http://url/to/img.png](https://github.com/onigetoc/require2import/blob/main/src/require2import3.gif)?raw=true)
-
 # require2import
 Automatically transform Node.js require() to ES module imports
 ===============================================================================
 
+
 **require2import** is a Node.js script that automatically transforms `require()` statements in JavaScript files to ES module `import` statements. This tool is designed to help developers migrate their existing Node.js projects to use ES modules instead of CommonJS modules.
+
+![require2import screenshot](https://github.com/onigetoc/require2import/blob/main/src/require2import3.gif?raw=true)
 
 ### Features
 
@@ -74,7 +75,7 @@ Try this from the examples folder to test this file and check the console.log:
     node src/sum.js // now it's working and the console.log show the result '8'
 
 Some example test i did to see if it's worked and helped me to create this projet.
-Don't forget to go to the path example dolder to try and test it. 
+Do not forget to the path example folder to try and test it and change or add `"type": "module"` in your project package.json to allow modules import.
 
     cd examples
 
