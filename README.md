@@ -4,7 +4,14 @@ require2import - Automatically transform Node.js require() to ES module imports
 
 **require2import** is a Node.js script that automatically transforms `require()` statements in JavaScript files to ES module `import` statements. This tool is designed to help developers migrate their existing Node.js projects to use ES modules instead of CommonJS modules.
 
-Why Frustration with testing Node.js code
+### Features
+
+*   Supports a wide range of `require()` usage patterns
+*   Can transform individual files or entire directories
+*   Preserves comments and formatting in the transformed files
+*   Provides clear and informative console output during the transformation process
+
+Frustration with testing Node.js code before
 -------------------------------------
 
 As a developer, I often found myself frustrated with the process of testing and running Node.js code, especially when compared to the ease of use and flexibility of Python. Creatint a package.json with everything right inside, manage dependencies, and handle various edge cases made the development workflow less efficient than I would have liked. Now, you can simply copy code from a library or documentation somewhere, drop a JavaScript file and convert it to ES modules if needed - and it just works (except if the npm module does not function properly ;[ ).
@@ -15,10 +22,10 @@ The require2import module was not created for large-scale projects, but rather t
 The motivation behind this tool was to bring the streamlined experience of Python development to the Node.js ecosystem. By automating the process of migrating from CommonJS modules to ES modules, require2import allows developers to more easily test and run their Node.js code, without the constant need to switch between the terminal and the code editor, manage dependencies, and handle various edge cases.
 So while require2import can be used for batch conversions of entire directories, its true strength lies in its ability to quickly transform individual files or small sets of files, enabling developers to rapidly iterate and experiment with different Node.js libraries and techniques.
 
-Install the require2import module as a development dependency (devDependency) rather than a production dependency, unless you have a specific need to include it in the production environment. The require2import module is designed to simplify the process of migrating Node.js projects from CommonJS modules to ES modules, which is a development-specific task.
+Install the require2import module as a development dependencies (devDependencies) rather than a production dependencies unless you have a specific need to include it in the production environment. The require2import module is designed to simplify the process of migrating Node.js projects from CommonJS modules to ES modules, which is a development-specific task.
 
-### WHy?
-I found that testing and running Node.js code was often more complex and time-consuming compared to the ease of use and flexibility I experienced when working with Python. For example, I was able to quickly test a PDF to text conversion using Python libraries in like 2 minutes (i'm just a beginer with Python), but struggled for over an hour to get the equivalent working in Node.js with its dependencies to finnally find the way to do it.
+### Why?
+I found that testing and running Node.js code was often more complex and time-consuming compared to the ease of use and flexibility I experienced when working with Python (i'm just a beginer with Python). For example, I was able to quickly test a PDF to text converter using Python libraries in like 2 minutes, but struggled for over an hour to get the equivalent working in Node.js with its dependencies and if it's require to finnally find the way to do it.
 
 require2import: Transforming require() to import
 ------------------------------------------------
@@ -31,6 +38,7 @@ require2import: Transforming require() to import
 *   Named imports from `require()`
 
 The script can be used to transform individual files or entire directories, making it easy to migrate your existing Node.js projects to use ES modules.
+For now it will only convert .js file extension.
 
 ### Installation
 
@@ -38,29 +46,35 @@ To use `require2import`, install it as a global npm package:
 
     npm install require2import // locally in a project
 
-### Usage
+### Usage require2import (Sort cut use r2i)
 
-To transform a single file (require to import ES):
+To transform a single js file (require to import ES). The target.js is the file ton convert for ES:
 
-    npm run modify target.js 
+    npm run require2import target.js
 
-Test it:
+Shorter is better? Do the same thing with the shortcut: r2i
+
+    npm run r2i target.js
+
+Test it with node if it do work now after conversion:
 
     node target.js 
 
 To transform all JavaScript files in a directory:
 
-    npm run modify src 
+    npm run require2importsrc 
 
-To transform all JavaScript files in the current directory:
-
-    npm run modify 
-
-Try this to test this file and check the console.log:
+Try this from the examples folder to test this file and check the console.log:
 
     node src/sum.js // it will not work
-    npm run modify src/sum.js // The file: src/sum.js has been modified successfully
+    npm run require2importsrc/sum.js // The file: src/sum.js has been modified successfully
     node src/sum.js // now it's working and the console.log show the result '8'
+
+Some example test i did to see if it's worked and helped me to create this projet.
+Don't forget to go to the path example dolder to try and test it. 
+
+    cd examples
+
 
 To transform all JavaScript files in the current directory (where is the require2import.js file):
 
@@ -84,18 +98,20 @@ import path from 'path';
 
 **Example 2: Transform a directory**
 
-    # Transform all JavaScript files in the 'src' directory require2import modify src 
+    # Transform all JavaScript files in the 'src' directory require2import require2importsrc 
 
 **Example 3: Transform a specific file in a directory**
 
-    # Transform the 'target.js' file in the 'src' directory require2import modify src/target.js 
+    # Transform the 'target.js' file in the 'src' directory require2import require2importsrc/target.js 
 
-### Features
+**Examples folder**
 
-*   Supports a wide range of `require()` usage patterns
-*   Can transform individual files or entire directories
-*   Preserves comments and formatting in the transformed files
-*   Provides clear and informative console output during the transformation process
+    *  Transform the 'target.js' file in the 'src' directory require2import require2importsrc/target.js 
+
+**For issues, requiest query, bug or bad convertion**
+*   issues
+*   [Issues](https://github.com/onigetoc/require2import/issues))
+
 
 ### Links
 
