@@ -1,5 +1,5 @@
 # require2import
-require2import - Automatically transform Node.js require() to ES module imports
+Automatically transform Node.js require() to ES module imports
 ===============================================================================
 
 **require2import** is a Node.js script that automatically transforms `require()` statements in JavaScript files to ES module `import` statements. This tool is designed to help developers migrate their existing Node.js projects to use ES modules instead of CommonJS modules.
@@ -25,7 +25,8 @@ So while require2import can be used for batch conversions of entire directories,
 Install the require2import module as a development dependencies (devDependencies) rather than a production dependencies unless you have a specific need to include it in the production environment. The require2import module is designed to simplify the process of migrating Node.js projects from CommonJS modules to ES modules, which is a development-specific task.
 
 ### Why?
-I found that testing and running Node.js code was often more complex and time-consuming compared to the ease of use and flexibility I experienced when working with Python (i'm just a beginer with Python). For example, I was able to quickly test a PDF to text converter using Python libraries in like 2 minutes, but struggled for over an hour to get the equivalent working in Node.js with its dependencies and if it's require to finnally find the way to do it.
+I found that testing and running Node.js code was often more complex and time-consuming compared to the ease of use and flexibility I experienced when working with Python (i'm just a beginer with Python). For example, I was able to quickly test a PDF to text converter using Python libraries in like 2 minutes, but struggled for over an hour to get the equivalent working in Node.js with its dependencies and if it's require to finnally find the way to do it. 
+You may have to modify the code example or snippet to make it work like addind 'await', 'promise' or others stuffs to make your modification compatible with your settings environment.
 
 require2import: Transforming require() to import
 ------------------------------------------------
