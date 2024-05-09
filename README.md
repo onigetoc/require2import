@@ -1,3 +1,5 @@
+![require2import screenshot]([http://url/to/img.png](https://github.com/onigetoc/require2import/blob/main/src/require2import3.gif)?raw=true)
+
 # require2import
 Automatically transform Node.js require() to ES module imports
 ===============================================================================
