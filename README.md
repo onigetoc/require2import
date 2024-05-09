@@ -26,7 +26,7 @@ Install the require2import module as a development dependencies (devDependencies
 
 ### Why?
 I found that testing and running Node.js code was often more complex and time-consuming compared to the ease of use and flexibility I experienced when working with Python (i'm just a beginer with Python). For example, I was able to quickly test a PDF to text converter using Python libraries in like 2 minutes, but struggled for over an hour to get the equivalent working in Node.js with its dependencies and if it's require to finnally find the way to do it. 
-You may have to modify the code example or snippet to make it work like addind 'await', 'promise' or others stuffs to make your modification compatible with your settings environment.
+You may have to modify the code example or snippet to make it work like addind 'async' 'await', 'promise' or others stuffs to make your modification compatible with your settings environment.
 
 require2import: Transforming require() to import
 ------------------------------------------------
