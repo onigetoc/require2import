@@ -1,6 +1,6 @@
-// import * as math from 'simple-test-package'; // Import type require
-import * as math from 'simple-test-package'; // Import type module
+// var math = require('simple-test-package'); // ORIGINAL: Import type commonjs
 
-const sum = math.sumNumbers(3, 5);
+// Install 'simple-test-package' to test real npm module
+const  math = require('simple-test-package'); 
 
-console.log(sum); // 8 
+var sum = math.sumNumbers(3, 5);
