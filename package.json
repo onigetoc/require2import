@@ -1,11 +1,11 @@
 {
-  "name": "import2require",
-  "version": "1.0.1",
+  "name": "require2import",
+  "version": "1.0.2",
   "description": "Node Typescript run tester for require to import transformation",
   "main": "require2import.js",
   "type": "module",
   "bin": {
-    "requiretoimport": "./require2import.js"
+    "requiretoimport": "require2import.js"
   },
   "scripts": {
     "require2import": "node require2import.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/onigetoc/require2import.git"
+    "url": "git+https://github.com/onigetoc/require2import.git"
   },
   "keywords": [
     "typescript",
@@ -27,6 +27,13 @@
   ],
   "author": "onigetoc",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/onigetoc/require2import/issues"
+  },
+  "homepage": "https://github.com/onigetoc/require2import#readme"
 }
