@@ -17,7 +17,7 @@ async function require2import() {
           await modifyDirectory(arg);
         }
       } else {
-        console.error(`Le chemin ${arg} n'existe pas.`);
+        console.error(`The patch: ${arg} do not exist.`);
       }
     }
   }
@@ -43,9 +43,9 @@ async function modifyDirectory(directory) {
         await modifyFile(path.join(dirPath, file));
       }
     }
-    console.log(`Tous les fichiers JavaScript dans le répertoire ${directory} ont été modifiés avec succès!`);
+    console.log(`All JavaScript files in the directory: ${directory} have been successfully modified!`);
   } catch (err) {
-    console.error(`Erreur lors de la modification des fichiers dans le répertoire ${directory}:`, err);
+    console.error(`Error while modifying files in the directory: ${directory}:`, err);
   }
 }
 

@@ -1,9 +1,12 @@
 {
-  "name": "gc-starter",
-  "version": "1.0.0",
-  "description": "Node Typescript run tester starter",
-  "main": "index.js",
+  "name": "import2require",
+  "version": "1.0.1",
+  "description": "Node Typescript run tester for require to import transformation",
+  "main": "require2import.js",
   "type": "module",
+  "bin": {
+    "requiretoimport": "./require2import.js"
+  },
   "scripts": {
     "require2import": "node require2import.js",
     "r2i": "node require2import.js",
@@ -11,33 +14,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "test"
+    "url": "https://github.com/onigetoc/require2import.git"
   },
   "keywords": [
     "typescript",
-    "starter",
+    "test",
     "node",
     "require",
     "import",
-    "transformation"
+    "transformation",
+    "convertion"
   ],
   "author": "onigetoc",
   "license": "MIT",
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "require2import.js": "file:.",
-    "install": "^0.13.0",
-    "npm": "^10.7.0",
-    "office-text-extractor": "^3.0.3",
-    "path": "^0.12.7",
-    "pdf-parse": "^1.1.1",
-    "pdf-text-reader": "^4.0.1",
-    "pdf2json": "^3.1.2",
-    "simple-test-package": "^0.2.2",
-    "unpdf": "^0.10.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.12.10",
-    "jest": "^29.7.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
