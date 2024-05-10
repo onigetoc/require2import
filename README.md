@@ -46,11 +46,15 @@ For now it will only convert .js file extension.
 
 ### Installation
 
-To use `require2import`, install it as a global npm package:
+To use `require2import`, installing packages locally:
 
-    npm install require2import // locally in a project
+    npm install require2import 
 
-### Usage require2import (Sort cut use r2i)
+installing packages globally::
+
+    npm install -g require2import
+
+### Usage require2import (Short cut use r2i)
 
 To transform a single js file (require to import ES). The target.js is the file ton convert for ES:
 
