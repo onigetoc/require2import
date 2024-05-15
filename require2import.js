@@ -1,5 +1,5 @@
-/** regex in transformRequireToImport from https://github.com/knowbee/rona/blob/master/lib/rona.js with the help of Perplexity.ai for all the code and adaptation */
-// with VS Code : https://umaar.com/dev-tips/222-vs-code-convert-es-import/
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 
@@ -195,3 +195,4 @@ function trim_edges(str) {
 
 // Appel de la fonction main()
 require2import();
+// module.exports = require2import;

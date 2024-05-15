@@ -1,16 +1,11 @@
 {
   "name": "require2import",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "description": "Node Typescript run tester for require to import transformation",
   "main": "require2import.js",
   "type": "module",
   "bin": {
-    "requiretoimport": "require2import.js"
-  },
-  "scripts": {
-    "require2import": "node require2import.js",
-    "r2i": "node require2import.js",
-    "rtoitest": "echo \"Error: no test specified\" && exit 1"
+    "requiretoimport": "./require2import.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +26,6 @@
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/onigetoc/require2import/issues"
   },
