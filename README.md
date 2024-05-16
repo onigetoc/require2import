@@ -58,11 +58,11 @@ installing packages globally::
 
 To transform a single js file (require to import ES). The target.js is the file ton convert for ES:
 
-    npm run require2import target.js
+    require2import target.js
 
 Shorter is better? Do the same thing with the shortcut: r2i
 
-    npm run r2i target.js
+    r2i target.js
 
 Test it with node if it do work now after conversion:
 
@@ -70,12 +70,12 @@ Test it with node if it do work now after conversion:
 
 To transform all JavaScript files in a directory:
 
-    npm run require2importsrc 
+    require2importsrc 
 
 Try this from the examples folder to test this file and check the console.log:
 
     node src/sum.js // it will not work
-    npm run require2importsrc/sum.js // The file: src/sum.js has been modified successfully
+    require2importsrc/sum.js // The file: src/sum.js has been modified successfully
     node src/sum.js // now it's working and the console.log show the result '8'
 
 Some example test i did to see if it's worked and helped me to create this projet.

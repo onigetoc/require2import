@@ -1,11 +1,11 @@
 {
   "name": "require2import",
-  "version": "1.0.9",
+  "version": "1.0.91",
   "description": "Node Typescript run tester for require to import transformation",
   "main": "require2import.js",
   "type": "module",
   "bin": {
-    "requiretoimport": "./require2import.js"
+    "require2import": "./require2import.js"
   },
   "repository": {
     "type": "git",
