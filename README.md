@@ -54,39 +54,26 @@ installing packages globally::
 
     npm install -g require2import
 
-### Usage require2import (Short cut use r2i)
+### Usage require2import (Short cut use require2import)
 
 To transform a single js file (require to import ES). The target.js is the file ton convert for ES:
 
     require2import target.js
 
-Shorter is better? Do the same thing with the shortcut: r2i
+To transform all JavaScript files in a directory ex: src :
 
-    r2i target.js
-
-Test it with node if it do work now after conversion:
-
-    node target.js 
-
-To transform all JavaScript files in a directory:
-
-    require2importsrc 
+    require2import src 
 
 Try this from the examples folder to test this file and check the console.log:
 
     node src/sum.js // it will not work
-    require2importsrc/sum.js // The file: src/sum.js has been modified successfully
-    node src/sum.js // now it's working and the console.log show the result '8'
+    require2import src/sum.js // The file: src/sum.js has been modified successfully
+    node src/sum.js // now it's working and the console.log will show the result '8'
 
 Some example test i did to see if it's worked and helped me to create this projet.
 Do not forget to the path example folder to try and test it and change or add `"type": "module"` in your project package.json to allow modules import.
 
     cd examples
-
-
-To transform all JavaScript files in the current directory (where is the require2import.js file):
-
-    node require2import.js
 
 
 The script will automatically detect and transform all `require()` statements in the specified files or directories, replacing them with the appropriate `import` statements.
