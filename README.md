@@ -93,11 +93,11 @@ import path from 'path';
 
 **Example 2: Transform a directory**
 
-    # Transform all JavaScript files in the 'src' directory require2import require2importsrc 
+    # Transform all JavaScript files in the 'src' directory require2import require2import src 
 
 **Example 3: Transform a specific file in a directory**
 
-    # Transform the 'target.js' file in the 'src' directory require2import require2importsrc/target.js 
+    # Transform the 'target.js' file in the 'src' directory require2import require2import src/target.js 
 
 **Examples folder**
 
