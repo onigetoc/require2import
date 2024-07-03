@@ -101,7 +101,7 @@ import path from 'path';
 
 **Examples folder**
 
-    *  Transform the 'target.js' file in the 'src' directory require2import require2importsrc/target.js 
+    *  Transform the 'target.js' file in the 'src' directory require2import require2import  src/target.js 
 
 **For issues, requiest query, bug or bad convertion**
 *   issues
