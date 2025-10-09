@@ -5,19 +5,26 @@ import path from 'path';
 
 async function require2import() {
   const args = process.argv.slice(2);
-  if (args.length === 0) {
-    await modifyDirectory('.');
+  const recursive = args.includes('/r');
+  const paths = args.filter((arg) => arg !== '/r');
+  if (paths.length === 0) {
+    await modifyDirectory('.', recursive);
   } else {
-    for (const arg of args) {
-      const targetPath = path.join(process.cwd(), arg);
-      if (await fs.promises.stat(targetPath)) {
-        if ((await fs.promises.stat(targetPath)).isFile()) {
+    for (const arg of paths) {
+      try {
+        const targetPath = path.join(process.cwd(), arg);
+        const stat = await fs.promises.stat(targetPath);
+        if (stat.isFile()) {
           await modifyFile(targetPath);
         } else {
-          await modifyDirectory(arg);
+          await modifyDirectory(arg, recursive);
         }
-      } else {
-        console.error(`The patch: ${arg} do not exist.`);
+      } catch (e) {
+        if (e.code === 'ENOENT') {
+          console.error(`The path: ${arg} do not exist.`);
+        } else {
+          throw e;
+        }
       }
     }
   }
@@ -34,13 +41,17 @@ async function modifyFile(filePath) {
   }
 }
 
-async function modifyDirectory(directory) {
+async function modifyDirectory(directory, recursive = false) {
   try {
     const dirPath = path.join(process.cwd(), directory);
     const files = await fs.promises.readdir(dirPath);
     for (const file of files) {
-      if (file.endsWith('.js')) {
-        await modifyFile(path.join(dirPath, file));
+      const filePath = path.join(dirPath, file);
+      const stat = await fs.promises.stat(filePath);
+      if (stat.isFile() && file.endsWith('.js')) {
+        await modifyFile(filePath);
+      } else if (recursive && stat.isDirectory()) {
+        await modifyDirectory(path.join(directory, file), recursive);
       }
     }
     console.log(`All JavaScript files in the directory: ${directory} have been successfully modified!`);
